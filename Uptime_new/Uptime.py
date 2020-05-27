@@ -71,7 +71,7 @@ def ath_mac_uptimelist(catch_start, catch_end,logfile,inter):
     for p in range(len(mac_address)):
         uptime_check(list(chain.from_iterable(upti[p])),mac_address[p],t,inter)             #calling function to check for uptime
     
-def Call_uptimelist(interface_list,fname):
+def Call_uptimelist(interface_list,fname):                 #interface_list=[ ath0,ath1,ath2 ](input) ; fname :logfile
   for interface in interface_list:
      ath_mac_uptimelist("root@RBR850:/# wlanconfig "+interface+" list sta",  "root@RBR850:/# ",fname,interface)
 
